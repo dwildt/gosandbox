@@ -23,7 +23,7 @@ func main() {
 	activateFeature("login.google")
 	activateFeature("login.facebook")
 
-	if properties["login.google"] == "on" {
+	if isActive("login.google") {
 		fmt.Println("login google ativo")
 	}
 
