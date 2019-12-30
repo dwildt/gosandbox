@@ -3,12 +3,17 @@ Sites que uso de referência / reference websites:
 * https://www.digitalocean.com/community/tutorial_series/how-to-code-in-go
 * https://github.com/diegogaulke/go-workshop
 
-Objetivo é contribuir com este repositório criando um capítulo sobre automação de testes / objective is to help this repository, building a chapter about automated tests. 
+Para iniciar uma máquina de código, lembrar de convenções (linux):
+* workspace $HOME/go/src/github.com/dwildt
+* artigo sobre workspaces https://golang.org/doc/code.html#Workspaces
+* lembrar do export GOROOT=$HOME/go
+
+Objetivo é contribuir com o repositório do Diego Gaulke, criando um capítulo sobre automação de testes / objective is to help Diego's repository, building a chapter about automated tests. 
 * https://github.com/diegogaulke/go-workshop
 
 Na pasta ch14-fizzbuzz se faz uso gotest.tools. Para instalar manualmente: 
 * go get gotest.tools/v3
 * ref https://github.com/gotestyourself/gotest.tools
   
-Sobre módulos, para ativar uso de módulos, modificar o bash_profile (mac os no meu caso):
+Sobre módulos. Para ativar uso de módulos, modificar o bash_profile (mac os no meu caso):
 export GO111MODULE=on  
