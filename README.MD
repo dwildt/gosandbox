@@ -7,9 +7,15 @@ Sites que uso de referência / reference websites:
 Para iniciar um worskpace, lembrar de convenções (linux):
 * workspace $HOME/go/src/github.com/dwildt
 * artigo sobre workspaces https://golang.org/doc/code.html#Workspaces
-* lembrar do export export GOPATH=$HOME/go
+* lembrar de: 
+* export GOPATH=$HOME/go
 * PATH=$PATH:$GOPATH/bin
 * export PATH
+
+No cloud9 precisei fazer estes "go get" para poder rodar os testes unitários:
+* go get gotest.tools  
+* go get github.com/google/go-cmp/cmp  
+* go get github.com/pkg/errors  
 
 Objetivo é contribuir com o repositório do Diego Gaulke, criando um capítulo sobre automação de testes / objective is to help Diego's repository, building a chapter about automated tests. 
 * https://github.com/diegogaulke/go-workshop
