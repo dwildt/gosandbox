@@ -7,7 +7,9 @@ Sites que uso de referência / reference websites:
 Para iniciar um worskpace, lembrar de convenções (linux):
 * workspace $HOME/go/src/github.com/dwildt
 * artigo sobre workspaces https://golang.org/doc/code.html#Workspaces
-* lembrar do export GOROOT=$HOME/go
+* lembrar do export export GOPATH=$HOME/go
+* PATH=$PATH:$GOPATH/bin
+* export PATH
 
 Objetivo é contribuir com o repositório do Diego Gaulke, criando um capítulo sobre automação de testes / objective is to help Diego's repository, building a chapter about automated tests. 
 * https://github.com/diegogaulke/go-workshop
