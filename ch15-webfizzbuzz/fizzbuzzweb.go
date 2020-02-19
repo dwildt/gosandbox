@@ -14,12 +14,11 @@ func main() {
 
 	r.GET("/fb/:number", func(c *gin.Context) {
 		number := c.Param("number")
-		value, _ :=  strconv.Atoi(number)
+		value, _ := strconv.Atoi(number)
 		number = fizzbuzz(value)
-		
-		c.String(http.StatusOK, "Hello %s", number)
+
+		c.String(http.StatusOK, "%s", number)
 	})
 
-	
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
