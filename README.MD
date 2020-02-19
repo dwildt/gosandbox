@@ -23,6 +23,11 @@ Objetivo é contribuir com o repositório do Diego Gaulke, criando um capítulo 
 Na pasta ch14-fizzbuzz se faz uso gotest.tools. Para instalar manualmente: 
 * go get gotest.tools/v3
 * ref https://github.com/gotestyourself/gotest.tools
-  
+
+Na pasta ch15-webfizzbuzz se faz uso do gin-gonic. 
+* go get -github.com/gin-gonic/gin
+* ref https://github.com/gin-gonic/gin
+* exemplo de execução: /fb/5 -> buzz 
+
 Sobre módulos. Para ativar uso de módulos, modificar o bash_profile (mac os no meu caso):
 * export GO111MODULE=on  
