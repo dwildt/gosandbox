@@ -5,19 +5,22 @@ import "net/http"
 import "strconv"
 
 func main() {
+	defaultRequest := "/fb/:number"
+
 	r := gin.Default()
-	r.GET("/fizzbuzz", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "fizz",
-		})
+	r.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK, "use %s to play with fizzbuzz", defaultRequest)
 	})
 
 	r.GET("/fb/:number", func(c *gin.Context) {
 		number := c.Param("number")
 		value, _ := strconv.Atoi(number)
-		number = fizzbuzz(value)
+		result := fizzbuzz(value)
 
-		c.String(http.StatusOK, "%s", number)
+		c.JSON(200, gin.H{
+			"value":  value,
+			"result": result,
+		})
 	})
 
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
