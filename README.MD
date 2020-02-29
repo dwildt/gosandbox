@@ -1,6 +1,7 @@
 Sites que uso de referência / reference websites: 
 * https://golang.org/doc/install
 * https://golang.org/doc/code.html#Workspaces
+* https://golang.org/doc/effective_go.html
 * https://www.digitalocean.com/community/tutorial_series/how-to-code-in-go
 * https://github.com/diegogaulke/go-workshop
 
@@ -12,7 +13,7 @@ Para iniciar um worskpace, lembrar de convenções (linux):
 * PATH=$PATH:$GOPATH/bin
 * export PATH
 
-No cloud9 precisei fazer estes "go get" para poder rodar os testes unitários:
+No aws cloud9 precisei fazer estes "go get" para poder rodar os testes unitários:
 * go get gotest.tools  
 * go get github.com/google/go-cmp/cmp  
 * go get github.com/pkg/errors  
@@ -31,3 +32,12 @@ Na pasta ch15-webfizzbuzz se faz uso do gin-gonic.
 
 Sobre módulos. Para ativar uso de módulos, modificar o bash_profile (mac os no meu caso):
 * export GO111MODULE=on  
+
+Normalmente editores já aplicam uma formatação para arquivos go, mas se precisar fazer na mão:
+* gofmt -w <nome do arquivo>.go 
+
+Para validação de estilo de código, golint
+* go get -u golang.org/x/lint/golint
+* depois pode usar "golint --help" para ver se está funcionando e aplicar no contexto onde você estiver. 
+
+
