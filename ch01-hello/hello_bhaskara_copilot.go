@@ -16,8 +16,8 @@ func main() {
 	if delta < 0 {
 		fmt.Println("No real roots")
 	} else {
-		root1 := (-b + delta) / (2 * a)
-		root2 := (-b - delta) / (2 * a)
+		root1 := (-b + delta) / (2 * a) // BUG HERE -- MISSING SQRT root1 := (-b + math.Sqrt(delta)) / (2 * a)
+		root2 := (-b - delta) / (2 * a) // BUG HERE -- MISSING SQRT root2 := (-b - math.Sqrt(delta)) / (2 * a)
 		fmt.Println("Root 1: ", root1)
 		fmt.Println("Root 2: ", root2)
 	}
