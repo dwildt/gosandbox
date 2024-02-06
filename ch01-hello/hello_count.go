@@ -16,5 +16,4 @@ func main() {
 	// get the length of the string
 	fmt.Println("len(input)")
 	fmt.Println(len(input))
-
 }
