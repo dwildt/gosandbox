@@ -9,10 +9,7 @@ This project implements a simple bank account system in Go, with functionality t
 
 ## How to Run the Code
 
-1. Clone or navigate to the project directory:
-   ```bash
-   cd ./gosandbox/vibe-coding-bank-account
-   ```
+1. Clone or navigate to the project directory (gosandbox/vibe-coding-bank-account):
 
 2. Initialize the Go module (if not already done):
    ```bash
@@ -28,10 +25,7 @@ This project implements a simple bank account system in Go, with functionality t
 
 ## How to Run the Tests
 
-1. Navigate to the project directory:
-   ```bash
-   cd ./gosandbox/vibe-coding-bank-account
-   ```
+1. Navigate to the project directory (/gosandbox/vibe-coding-bank-account):
 
 2. Run all tests:
    ```bash
@@ -60,6 +54,8 @@ vibe-coding-bank-account/
 
 When you run the application, it will create a bank account for "John Doe" with an initial balance of 1000.0 and display the account details.
 
+For more business rules, such as deposit and withdrawal behavior, refer to the test files located in `bank/account_test.go`. These tests demonstrate how the account logic handles various scenarios, including deposits, withdrawals, and insufficient funds.  
+
 ## License
 
-This project is for educational purposes and does not include a specific license.
+This project is for educational purposes and does not include a specific license. The code was generated using the GPT-4o model and "Vibe Coding".
