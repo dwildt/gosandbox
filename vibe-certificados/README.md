@@ -59,17 +59,36 @@ vibe-certificados/
 - `PUT /api/templates/{id}` - Atualizar template
 - `DELETE /api/templates/{id}` - Remover template
 
+## Pré-requisitos / Prerequisites
+
+- Go 1.24+ instalado
+- Git para controle de versão
+
 ## Instalação e Execução / Installation and Execution
 
 ```bash
+# Clonar o repositório
+git clone <repository-url>
+cd vibe-certificados
+
 # Instalar dependências
 go mod download
 
 # Executar aplicação
 go run main.go
 
+# A aplicação estará disponível em:
+# http://localhost:8080
+
 # Executar testes
 go test ./...
+
+# Executar testes com cobertura
+go test -cover ./...
+
+# Build da aplicação
+go build -o vibe-certificados main.go
+./vibe-certificados
 ```
 
 ## Uso / Usage
@@ -132,11 +151,45 @@ Os templates definem a estrutura e aparência dos certificados:
 - **Funcionais**: Cypress (se aplicável)
 - **Cobertura**: Validação de todos os endpoints e cenários
 
+## Dependências / Dependencies
+
+- **gin-gonic/gin** v1.10.1 - Framework web HTTP
+- **google/uuid** v1.6.0 - Geração de identificadores únicos
+- **jung-kurt/gofpdf** v1.16.2 - Geração de PDF nativo em Go
+
 ## Tecnologias / Technologies
 
-- **Go 1.20+**
-- **Gin-gonic**: Framework web
-- **UUID**: Identificação única
-- **HTML/CSS**: Templates de certificados
-- **PDF**: Geração via bibliotecas Go
-- **Swagger**: Documentação da API
+- **Go 1.24+** - Linguagem principal
+- **Gin-gonic** - Framework web REST API
+- **UUID** - Identificação única de certificados
+- **HTML/CSS** - Templates de certificados para web
+- **gofpdf** - Geração nativa de PDF em Go (não requer dependências externas)
+- **JSON** - Configuração de templates
+
+## Funcionalidades Implementadas / Implemented Features
+
+✅ **Geração de certificados únicos via API**
+✅ **Geração em lote via upload de CSV**
+✅ **Export para HTML com template personalizado**
+✅ **Export para PDF com layout profissional**
+✅ **Templates configuráveis via JSON**
+✅ **Busca de certificados por email**
+✅ **CRUD completo de templates**
+✅ **Armazenamento em memória (para desenvolvimento)**
+✅ **Testes unitários**
+✅ **API REST documentada**
+
+## Health Check
+
+Verifique se a aplicação está funcionando:
+```bash
+curl http://localhost:8080/api/health
+```
+
+## Logs e Debugging
+
+A aplicação usa o sistema de logs padrão do Gin. Para modo de produção:
+```bash
+export GIN_MODE=release
+go run main.go
+```
